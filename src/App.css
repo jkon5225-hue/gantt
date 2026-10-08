@@ -1,0 +1,234 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Arial,
+    "Noto Sans JP",
+    sans-serif;
+
+  background: #f5f5f5;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =========================
+   ヘッダー
+   ========================= */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.reset-button {
+  padding: 8px 18px;
+
+  border: 1px solid #aaa;
+  border-radius: 5px;
+
+  background: white;
+
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  background: #eee;
+}
+
+
+/* =========================
+   説明
+   ========================= */
+
+.description {
+  margin-bottom: 15px;
+
+  padding: 10px 12px;
+
+  background: white;
+
+  border: 1px solid #ddd;
+  border-radius: 5px;
+
+  color: #555;
+}
+
+
+/* =========================
+   Gantt
+   ========================= */
+
+.gantt-host {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: white;
+
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+/*
+ * 依存関係の矢印を非表示
+ */
+.gantt-host .arrow {
+  display: none !important;
+}
+
+/*
+ * Frappe Ganttの依存関係表示用要素を
+ * 非表示にする
+ */
+.gantt-host .arrow {
+  visibility: hidden;
+}
+
+
+/* =========================
+   Popup
+   ========================= */
+
+.popup {
+  padding: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   タスク一覧
+   ========================= */
+
+.task-table {
+  margin-top: 25px;
+
+  padding: 15px;
+
+  background: white;
+
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.task-table h2 {
+  margin-top: 0;
+}
+
+.task-table table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+  padding: 8px 10px;
+
+  border: 1px solid #ddd;
+
+  text-align: left;
+}
+
+.task-table th {
+  background: #f0f0f0;
+}
+
+/* モーダル背景 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* モーダルコンテンツ */
+.modal {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.modal input {
+  margin-top: 4px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.create-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  margin-right: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+/* フッター */
+.copyright {
+  text-align: center;
+  padding: 10px;
+}
